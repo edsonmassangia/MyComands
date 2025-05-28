@@ -1,0 +1,7 @@
+nano /etc/apache2/sites-available/default-ssl.conf
+chmod 777 wp-config.php
+tail -f /var/log/apache2/error.log
+nano /etc/apache2/sites-enabled/000-default.con
+
+
+SELECT * FROM wp_options LIMIT 5;
