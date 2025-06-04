@@ -118,6 +118,12 @@ for more information on what might be going wrong.
 //Default server (index 1)
 $count =1;
 
+
+$cfg['Servers'][$count]['host'] = '127.0.0.1';
+$cfg['Servers'][$count]['port'] = '3307';
+$cfg['Servers'][$count]['user'] = 'root';
+$cfg['Servers'][$count]['password'] = '12345678';
+
 $cfg['Servers'][$count]['host'] = '127.0.0.1';
 $cfg['Servers'][$count]['port'] = '3308';
 $cfg['Servers'][$count]['user'] = 'root';
@@ -136,11 +142,6 @@ $cfg['Servers'][$count]['host'] = '127.0.0.1';
 $cfg['Servers'][$count]['port'] = '33010';
 $cfg['Servers'][$count]['user'] = 'root';
 $cfg['Servers'][$count]['password'] = 'pproblematic';
-
-
-
-
-
 
 
 ex: on bin
