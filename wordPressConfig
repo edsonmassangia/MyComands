@@ -5,3 +5,10 @@ nano /etc/apache2/sites-enabled/000-default.con
 
 
 SELECT * FROM wp_options LIMIT 5;
+
+
+Download wordpress versao wordpress-6.8.2.zip
+sudo systemctl stop apache2
+sudo rsync -av --exclude='wp-content' --exclude='wp-config.php' /tmp/wordpress/ /var/www/html/itc/
+sudo chown -R www-data:www-data /var/www/html/itc
+sudo systemctl start apache2
