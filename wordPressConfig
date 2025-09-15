@@ -6,9 +6,17 @@ nano /etc/apache2/sites-enabled/000-default.con
 
 SELECT * FROM wp_options LIMIT 5;
 
+sudo update-alternatives --set php /usr/bin/php8.2
+
+======================= Comando de backup ===========================================
+sudo tar -czvf /var/www/html/transcom.tar.gz -C /var/www/html transcom
+
+sudo scp -r edson@192.168.6.178:~/Documents/websites/backup/BK_Full_ITC_2025-09-05.tar.gz .
 
 Download wordpress versao wordpress-6.8.2.zip
 sudo systemctl stop apache2
 sudo rsync -av --exclude='wp-content' --exclude='wp-config.php' /tmp/wordpress/ /var/www/html/itc/
 sudo chown -R www-data:www-data /var/www/html/itc
 sudo systemctl start apache2
+
+sudo scp -r /tmp/wordpress-seo /var/www/html/isutc/wp-content/plugins
