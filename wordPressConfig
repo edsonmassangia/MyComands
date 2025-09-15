@@ -10,6 +10,7 @@ sudo update-alternatives --set php /usr/bin/php8.2
 
 ======================= Comando de backup ===========================================
 sudo tar -czvf /var/www/html/transcom.tar.gz -C /var/www/html transcom
+sudo scp -r /var/www/html/itc.tar.gz edson@192.168.6.178:~/Documents/websites/Backup_Final
 
 sudo scp -r edson@192.168.6.178:~/Documents/websites/backup/BK_Full_ITC_2025-09-05.tar.gz .
 
