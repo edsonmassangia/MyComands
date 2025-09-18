@@ -21,3 +21,5 @@ sudo chown -R www-data:www-data /var/www/html/itc
 sudo systemctl start apache2
 
 sudo scp -r /tmp/wordpress-seo /var/www/html/isutc/wp-content/plugins
+docker images
+docker ps
