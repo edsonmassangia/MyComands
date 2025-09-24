@@ -26,3 +26,4 @@ docker ps
 
 
 mvn clean install -Dmaven.test.skip
+SET GLOBAL max_allowed_packet = 64 * 1024 * 1024;
